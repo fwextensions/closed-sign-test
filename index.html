@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SF Office Closure Sign Generator</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>SF Office Closure Sign Generator</h1>
+			<p>Create standardized closure signs for your department</p>
+		</header>
+
+		<main>
+			<div class="form-container">
+				<form id="closureForm">
+					<div class="form-group">
+						<label for="departmentName">Department Name:</label>
+						<input type="text" id="departmentName" required>
+					</div>
+
+					<div class="form-group">
+						<label for="closureInfo">Closure Information:</label>
+						<textarea id="closureInfo" rows="6" placeholder="Example: We will be closed on Monday, March 30th from 2pm to 5pm for staff training. We will reopen on Tuesday, March 31st at 8am." required></textarea>
+					</div>
+
+					<div class="form-group">
+						<label for="additionalInfo">Additional Information (optional):</label>
+						<textarea id="additionalInfo" rows="2" placeholder="Example: For urgent matters, please call 555-123-4567."></textarea>
+					</div>
+
+					<div class="button-group">
+						<button type="submit" id="generateBtn">Generate Sign</button>
+						<button type="button" id="printBtn" disabled>Print Sign</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="preview-container hidden" id="previewContainer">
+				<h2>Preview</h2>
+				<div class="sign-preview" id="signPreview">
+					<!-- Sign will be rendered here -->
+				</div>
+				
+				<div class="json-data">
+					<h3>JSON Data for CMS</h3>
+					<pre id="jsonOutput"></pre>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<p> 2025 City and County of San Francisco</p>
+		</footer>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>
